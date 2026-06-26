@@ -1,0 +1,41 @@
+Curso Docker
+
+Oq é:
+	Reduz complexidade de setup das aplicações
+	Servidores para rodar na nossa aplicação
+	Criar ambientes independentes que funcionam em diveroso SO´s
+	Projetos performáticos
+
+Códigos:
+    docker version -> Versão
+
+    Rodar:
+        docker run ubuntu -> Baixando ubuntu
+        docker run -it ubuntu -> Rodar o ubuntu iterando com o ubuntu
+        docker run -d nginx -> Roda o nginx sem aparecer varios aviso de dowload, etc. Deixando o terminal livre
+        docker run -it --rm ubuntu -> Rodar o ubuntu gerando uym container e quando acabar apaga para não ficar aramazenado
+        docker run -d -p 80:80 nginx -> Rodar em uma porta
+        docker start ID -> Rodar um container que foi stop
+        docker run -d -p 80:80 --name nginx_app nginx -> Definir o nome do container
+
+    Listagem:
+        Docker os -> Ver imgs ativa
+        docker container prune -> limpa os containers
+        docker ps -a -> Lista todos os containers já executados e executando
+        docker container ls -> Lista os container
+
+    Excluir/Parar:
+        docker stop NAMES/IDS -> Para container
+        docker rm ID -> Para deletar container
+        docker rm NAMES/ID -f -> Para um container e deleta
+
+
+    Logs:
+        docker logs ID/NAME -> Ver logs do container
+
+
+Conceitos: 
+    Imagem -> É o projeto que será executavel pelo container, todas instruções estarão declaradas nela
+    Container -> Docker rodando alguma imagem, consequentemente executando algum código proposto por ela
+    Fluxo -> Programamos uma imagem e a executamos por meio de um container
+    Container x VM -> Container serve para um determinado fim, euqnato vm tem seu so proprio e pode executar diversas funções ao mesmo tempo

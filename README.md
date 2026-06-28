@@ -1,2 +1,13 @@
-# Conhecimento-DOCKER
+# Docker
 
+---
+
+Aprendizados:
+  1. Conceitos básicos de container, imagem , VM x Docer, etc
+  2. Como rodar, excluir, stop, start um container
+
+---
+
+Stacks:
+
+<a href="https://github.com/arthurresendes/Conhecimento-DOCKER"><img src="https://skillicons.dev/icons?i=docker" alt="Docker" height="48"></a>

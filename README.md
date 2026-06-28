@@ -3,8 +3,8 @@
 ---
 
 Aprendizados:
-  1. Conceitos básicos de container, imagem , VM x Docer, etc
-  2. Como rodar, excluir, stop, start um container
+  - Conceitos básicos de container, imagem , VM x Docer, etc
+  - Como rodar, excluir, stop, start um container
 
 ---
 

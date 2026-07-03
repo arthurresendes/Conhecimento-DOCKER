@@ -47,3 +47,4 @@ Conceitos:
     Container -> Docker rodando alguma imagem, consequentemente executando algum código proposto por ela
     Fluxo -> Programamos uma imagem e a executamos por meio de um container
     Container x VM -> Container serve para um determinado fim, euqnato vm tem seu so proprio e pode executar diversas funções ao mesmo tempo
+    Layers(camadas) -> Cada instrução no dockerfile representa uma layer, quando algo atualizado apenas as layers depois da linha atualizada são refeitas, tornando o build mais rápido

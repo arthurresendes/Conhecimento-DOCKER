@@ -1,4 +1,4 @@
-# Linguagem ou framework utilizado
+# Linguagem ou framework utilizado, :versão
 FROM node 
 
 # Cria a pasta app e roda o container dentro dela, todos comandos seguintes rodam no app

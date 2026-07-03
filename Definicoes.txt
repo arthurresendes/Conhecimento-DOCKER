@@ -35,11 +35,11 @@ Códigos:
 
     Criar Imagem:
         FROM -> Imagem base
-        WORKDIR -> diretorio da aplicação
-        EXPOSE -> porta
-        COPY -> Quais arquivos serão copiados
-        CMD ["node", "arq.js"]
-        docker build . -> No terminal para rodar o Dockerfile
+        WORKDIR -> Diretorio da aplicação
+        EXPOSE -> Porta
+        COPY -> Quais arquivos serão copiados (requirements.txt, package.json)
+        CMD ["linguagem/framework", "arq.x"]
+        docker build . -> No terminal para rodar o Dockerfile (Caso faça alteração é necessario buildar novamente)
 
 
 Conceitos: 

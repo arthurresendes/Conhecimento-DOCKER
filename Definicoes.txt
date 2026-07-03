@@ -13,7 +13,7 @@ Códigos:
         docker run ubuntu -> Baixando ubuntu
         docker run -it ubuntu -> Rodar o ubuntu iterando com o ubuntu
         docker run -d nginx -> Roda o nginx sem aparecer varios aviso de dowload, etc. Deixando o terminal livre
-        docker run -it --rm ubuntu -> Rodar o ubuntu gerando uym container e quando acabar apaga para não ficar aramazenado
+        docker run -it --rm ubuntu -> Rodar o ubuntu gerando um container e quando acabar apaga para não ficar aramazenado
         docker run -d -p 80:80 nginx -> Rodar em uma porta
         docker start ID -> Rodar um container que foi stop
         docker run -d -p 80:80 --name nginx_app nginx -> Definir o nome do container
@@ -32,6 +32,14 @@ Códigos:
 
     Logs:
         docker logs ID/NAME -> Ver logs do container
+
+    Criar Imagem:
+        FROM -> Imagem base
+        WORKDIR -> diretorio da aplicação
+        EXPOSE -> porta
+        COPY -> Quais arquivos serão copiados
+        CMD ["node", "arq.js"]
+        docker build . -> No terminal para rodar o Dockerfile
 
 
 Conceitos: 

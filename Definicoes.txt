@@ -17,8 +17,9 @@ Códigos:
         docker run -it ubuntu -> Rodar o ubuntu iterando com o ubuntu
         docker run -d nginx -> Roda o nginx sem aparecer varios aviso de dowload, etc. Deixando o terminal livre
         docker run -it --rm ubuntu -> Rodar o ubuntu gerando um container e quando acabar apaga para não ficar aramazenado
-        docker run -d -p 80:80 nginx -> Rodar em uma porta
-        docker start ID -> Rodar um container que foi stop
+        docker run -d -p 80:80 nginx -> Rodar em uma porta (O primeiro 80 é a porta do google por exemplo e a segunda do servidor por exemplo)
+        docker start ID -> Rodar um container que foi stop sem rodar interativo
+        docker start -i ID -> Rodar um container que foi stop rodando interativo, ou seja mostrando os logs
         docker run -d -p 80:80 --name nginx_app nginx -> Definir o nome do container
         docker pull python -> Baixar e deixar disponivel no ambiente
     
@@ -30,12 +31,14 @@ Códigos:
         docker container prune -> limpa os containers
         docker ps -a -> Lista todos os containers já executados e executando
         docker container ls -> Lista os container
+        docker images -> Ver imagens
 
     Excluir/Parar:
         docker stop NAMES/IDS -> Para container
         docker rm ID -> Para deletar container
         docker rm NAMES/ID -f -> Para um container e deleta
-
+        docker rmi <imagem> -> Apagar imagem
+        docker rmi <imagem> -f -> Força a apagar imagem
 
     Logs:
         docker logs ID/NAME -> Ver logs do container
@@ -47,6 +50,8 @@ Códigos:
         COPY -> Quais arquivos serão copiados (requirements.txt, package.json)
         CMD ["linguagem/framework", "arq.x"]
         docker build . -> No terminal para rodar o Dockerfile (Caso faça alteração é necessario buildar novamente)
+        docker build -t meu_node_builder . -> Colocar name no build
+        docker build -t meu_node_builder:nova_tag . -> Colocar tag e nome no build
 
 
 Conceitos: 

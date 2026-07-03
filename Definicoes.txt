@@ -9,6 +9,9 @@ Oq é:
 Códigos:
     docker version -> Versão
 
+    Ajuda:
+        docker run --help
+
     Rodar:
         docker run ubuntu -> Baixando ubuntu
         docker run -it ubuntu -> Rodar o ubuntu iterando com o ubuntu
@@ -17,6 +20,10 @@ Códigos:
         docker run -d -p 80:80 nginx -> Rodar em uma porta
         docker start ID -> Rodar um container que foi stop
         docker run -d -p 80:80 --name nginx_app nginx -> Definir o nome do container
+        docker pull python -> Baixar e deixar disponivel no ambiente
+    
+    Renomear:
+        docker tag idImagem novo_nome:nova_tag
 
     Listagem:
         Docker os -> Ver imgs ativa

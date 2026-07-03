@@ -6,6 +6,10 @@ app.get("/", (req, res) => {
   res.send("Olá minha imagem!");
 });
 
+app.get("/hello-world", (req, res) => {
+  res.send("Olá mundo!");
+});
+
 app.listen(port, () => {
   console.log(`Executando na porta: ${port}`);
 });

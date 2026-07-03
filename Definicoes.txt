@@ -39,6 +39,7 @@ Códigos:
         docker rm NAMES/ID -f -> Para um container e deleta
         docker rmi <imagem> -> Apagar imagem
         docker rmi <imagem> -f -> Força a apagar imagem
+        docker system prune -> Remove as imagens, containers e networks não utilizados
 
     Logs:
         docker logs ID/NAME -> Ver logs do container

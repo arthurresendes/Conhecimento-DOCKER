@@ -23,6 +23,8 @@ Códigos:
         docker run -d -p 80:80 --name nginx_app nginx -> Definir o nome do container
         docker pull python -> Baixar e deixar disponivel no ambiente
         docker cp nome:/app/arq ./pasta/ -> Copiar arquivos para uma pasta
+    
+    Containers:
         docker top name_container -> Ver mais infos sobre um container que está rodando
         docker inspect nome_container -> Ver informações como id, data criação, imagem, etc em JSON
         docker stats -> Ver como anda o processamento, memoria que um container esta gastando

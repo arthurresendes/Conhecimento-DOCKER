@@ -33,6 +33,10 @@ Códigos:
         docker login -> Logar passando username e password
         docker logout -> Encerrar secção de login
 
+    Enviar imagem para Docker hub:
+        docker push nomeHub/nomeimagemHub -> Mandar imagem para o hub
+        docker build -t nomeHub/nomeImagem:tag -> Buildar nova versão mudando tag para hub
+
     Renomear:
         docker tag idImagem novo_nome:nova_tag
 

@@ -29,6 +29,10 @@ Códigos:
         docker inspect nome_container -> Ver informações como id, data criação, imagem, etc em JSON
         docker stats -> Ver como anda o processamento, memoria que um container esta gastando
     
+    Autenticação:
+        docker login -> Logar passando username e password
+        docker logout -> Encerrar secção de login
+
     Renomear:
         docker tag idImagem novo_nome:nova_tag
 

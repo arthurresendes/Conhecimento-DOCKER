@@ -22,6 +22,7 @@ Códigos:
         docker start -i ID -> Rodar um container que foi stop rodando interativo, ou seja mostrando os logs
         docker run -d -p 80:80 --name nginx_app nginx -> Definir o nome do container
         docker pull python -> Baixar e deixar disponivel no ambiente
+        coker cp nome:/app/arq ./pasta/
     
     Renomear:
         docker tag idImagem novo_nome:nova_tag

@@ -67,6 +67,17 @@ Códigos:
         docker build . -> No terminal para rodar o Dockerfile (Caso faça alteração é necessario buildar novamente)
         docker build -t meu_node_builder . -> Colocar name no build
         docker build -t meu_node_builder:nova_tag . -> Colocar tag e nome no build
+    
+    Volumes:
+        Anonimo: docker run -d -p 80:80 --name name_cont --rm -v /data image
+        Nomeado: docker run -d -p 80:80 --name name_cont -v nomeVolume:/var/www/html/messages --rm image
+        bind mount: docker run -d -p 80:80 --name name_cont -v C:\Caminhodasuapasta:/var/www/html/messages --rm image
+        Listar: docker volume ls
+        Criar volume manualmente: docker volume create nome
+        Inscepcionar o volume: docker volume inspect nome
+        Reomver um volume: docker volume rm nome
+        Remover volumes não utilizados em massa: docker volume prune
+        Volume somente leitura: docker run -d -p 80:80 --name name_cont -v nomeVolume:/var/www/html:ro --rm image
 
 
 Conceitos: 
@@ -75,3 +86,4 @@ Conceitos:
     Fluxo -> Programamos uma imagem e a executamos por meio de um container
     Container x VM -> Container serve para um determinado fim, euqnato vm tem seu so proprio e pode executar diversas funções ao mesmo tempo
     Layers(camadas) -> Cada instrução no dockerfile representa uma layer, quando algo atualizado apenas as layers depois da linha atualizada são refeitas, tornando o build mais rápido
+    Volumes: Anônimos, Nomeados ou Bind mounts(salva na máquina). Persiste valores mesmo após a remoção de containers

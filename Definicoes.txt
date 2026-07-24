@@ -84,6 +84,7 @@ Códigos:
         Criar: docker network create <nome> (tipo bridge) - docker network create -d macvlan <nome>
         Remover: docker network rm <nome>
         Remover networks que não são utilizados: docker network prune
+        Conectando e rodando: docker run -d -p 5000:5000 --name <nomeContainer> --rm --network <nomeNetwork> <nomeImagem> (As imagens conectadas tem que ter esse --network)
 
 
 Conceitos: 

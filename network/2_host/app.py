@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config["DEBUG"] = True
 
 app.config['MYSQL_HOST'] = 'host.docker.internal'  # conexao com hosts internos
-app.config['MYSQL_USER'] = '' # colocar user qnd for fzr teste dnv
+app.config['MYSQL_USER'] = ''
 app.config['MYSQL_PASSWORD'] = '' # senha se tiver
 app.config['MYSQL_DB'] = 'flaskhost'
 

@@ -75,9 +75,15 @@ Códigos:
         Listar: docker volume ls
         Criar volume manualmente: docker volume create nome
         Inscepcionar o volume: docker volume inspect nome
-        Reomver um volume: docker volume rm nome
+        Remover um volume: docker volume rm nome
         Remover volumes não utilizados em massa: docker volume prune
         Volume somente leitura: docker run -d -p 80:80 --name name_cont -v nomeVolume:/var/www/html:ro --rm image
+    
+    Networks:
+        Listagem: docker network ls
+        Criar: docker network create <nome> (tipo bridge) - docker network create -d macvlan <nome>
+        Remover: docker network rm <nome>
+        Remover networks que não são utilizados: docker network prune
 
 
 Conceitos: 
@@ -87,3 +93,10 @@ Conceitos:
     Container x VM -> Container serve para um determinado fim, euqnato vm tem seu so proprio e pode executar diversas funções ao mesmo tempo
     Layers(camadas) -> Cada instrução no dockerfile representa uma layer, quando algo atualizado apenas as layers depois da linha atualizada são refeitas, tornando o build mais rápido
     Volumes: Anônimos, Nomeados ou Bind mounts(salva na máquina). Persiste valores mesmo após a remoção de containers
+    Network: Realizar comunicações externas(APIs), host e entre containers
+    Drivers: Definem como o network se comporta, com seus devidos tipos que são eles:
+        Bridge: Utilizado quando containers precisam se comunicar
+        host: Conexão entre um container e a máquina
+        macvlan: Conexão entre um container por um MAC address
+        none: Remove todas as conexões de rede de um container
+        plugins: Permite extensão de terceiros para criar outras redes

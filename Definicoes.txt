@@ -104,3 +104,4 @@ Conceitos:
         none: Remove todas as conexões de rede de um container
         plugins: Permite extensão de terceiros para criar outras redes
     YAML(yml ou yaml): Usado geralmente para arquivos de configurações, inclusivo no Docker, para configuirar o Docker Compose
+    Docker Compose: Ferramenta para roda multiplos containers, com um arquivo de configuração(yaml), rodando multiplos builds e runs com um comando

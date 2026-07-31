@@ -1,0 +1,20 @@
+nome: Arthur # Podemos escrever com ou sem aspas
+idade: 19
+
+# Criando um objeto, dar 2 espaço para saber que ele pertence a tal objeto
+objeto:
+  versao: 2
+  arquivo: "teste.txt"
+  deploy: ~ # Para null podemos usar ~ ou null
+  isCheck: On # podemos usar True ou On
+  isFalse: Off # podemos usar Off ou False
+  listaNomes: ["Arthur", Jose, "Josias"]
+  listaIdade:
+    - 19
+    - 20
+    - 21
+  dicionarioBase: { "Arthur": 19, Jose: 20, "Josias": 21 }
+  dicionarioModo2:
+    "Arthur": 19
+    Jose: 20
+    "Josias": 21

@@ -94,6 +94,7 @@ Códigos:
         Rodar: docker compose up
         Rodar em detached: docker compose up -d
         Parar em background: docker compose down
+        Listar: docker-compose ps
 
 
 Conceitos: 

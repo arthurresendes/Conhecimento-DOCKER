@@ -16,7 +16,7 @@ services: # Serviços que iremos utilizar
     depends_on: #Executa o db antes
       - db
     image: wordpress:latest
-    expose:
+    ports:
       - '8000:80'
     restart: always
     environment:

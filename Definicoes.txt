@@ -89,6 +89,13 @@ Códigos:
         Desconectar manualmente um container a uma rede: docker network disconnect <rede/nomeNetwork> <container>
         Inspecionar rede: docker network inspect <nomeNetwork/rede>
 
+    Docker compose:
+        Criar arquivo docker-compose.yaml
+        Rodar: docker compose up
+        Rodar em detached: docker compose up -d
+        Parar em background: docker compose down
+
+
 Conceitos: 
     Imagem -> É o projeto que será executavel pelo container, todas instruções estarão declaradas nela
     Container -> Docker rodando alguma imagem, consequentemente executando algum código proposto por ela

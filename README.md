@@ -2,8 +2,6 @@
 
 ---
 
----
-
 ## Como rodar — caminho curto
 1. Construir imagem a partir do Dockerfile:
    - docker build -t meuapp:latest .

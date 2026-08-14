@@ -95,7 +95,13 @@ Códigos:
         Rodar em detached: docker compose up -d
         Parar em background: docker compose down
         Listar: docker-compose ps
-
+    Docker swarm:
+        Ativar docker swarm: docker swarm init
+        docker node ls: Listar nós
+        Criar nó: docker run -d --privileged --name node1 --hostname node1 docker:dind
+        Iniciar no manager: docker exec -it node1 docker swarm init
+        Juntar ao cluster: docker exec -it node2 docker swarm join --token <COLE_O_SEU_TOKEN_AQUI> <IP_DO_MANAGER>:2377
+        
 
 Conceitos: 
     Imagem -> É o projeto que será executavel pelo container, todas instruções estarão declaradas nela
@@ -113,3 +119,10 @@ Conceitos:
         plugins: Permite extensão de terceiros para criar outras redes
     YAML(yml ou yaml): Usado geralmente para arquivos de configurações, inclusivo no Docker, para configuirar o Docker Compose
     Docker Compose: Ferramenta para roda multiplos containers, com um arquivo de configuração(yaml), rodando multiplos builds e runs com um comando
+    Orquestração: Gerenciar e escalar os containers, rege sobre outros serviços, serviços: Docker Swarm, Kubernetes e Apache Mesos
+    Docker Swarm: Ferramente de orquestração, escalar horizontal(compartilhando recursos), o famoso cluster. Conceitos:
+        Nodes: É uma instância (máquina) que participa do swarm
+        Manager node: Node que gerencia os nodes
+        Worker Node: Nodes que trabalham em função do manager
+        Service: Conjunto de Tasks que o Manager Node manda o Work Node executar
+        Task: comando que são executados nos nodes

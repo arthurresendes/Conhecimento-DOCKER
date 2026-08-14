@@ -95,12 +95,18 @@ Códigos:
         Rodar em detached: docker compose up -d
         Parar em background: docker compose down
         Listar: docker-compose ps
+    
     Docker swarm:
         Ativar docker swarm: docker swarm init
-        docker node ls: Listar nós
+        Listar nós: docker node ls(se estiver dentro do nó manager) || docker exec -it <manager> docker node ls
+        Parar e Remover nos: docker stop <nome> -> docker node rm <nome> || docker node -f rm <nome>
+        Remover para não aparecer down: docker exec -it <manager> docker node rm <no>
         Criar nó: docker run -d --privileged --name node1 --hostname node1 docker:dind
         Iniciar no manager: docker exec -it node1 docker swarm init
         Juntar ao cluster: docker exec -it node2 docker swarm join --token <COLE_O_SEU_TOKEN_AQUI> <IP_DO_MANAGER>:2377
+        Listar serviços: docker service ls
+        Remover seviço: docker service rm <nome>
+        Recuperar token: docker swarm join-token manager
         
 
 Conceitos: 

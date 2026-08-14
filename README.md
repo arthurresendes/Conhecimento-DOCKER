@@ -11,8 +11,6 @@
    - docker compose up --build
    - docker compose down --volumes
 
-Notas: adapte as portas, variáveis de ambiente e volumes conforme o serviço (e.g., mounting do código para dev).
-
 ---
 
 ## Comandos Docker essenciais (rápido)

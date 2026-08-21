@@ -115,6 +115,12 @@ Códigos:
         Deixar nos: docker swarm leave
         Inscepcionando serviço: docker service inspect <id>
         Inscepcionar serviço: docker service ps <id>
+        Compose: docker stack deploy -c <arquivo_yaml> <nome>
+        Escalar serviços: docker service scale <nome>=<replicas>
+        Não receber mais ordens do manager: docker node update --availability drain <id>
+        Atualizar imagem: docker service update --image <imagem> <servico>
+        Criar rede: docker network create --driver overlay swarm 
+        Concetando serviço a uma rede: docker service update --network <rede> <nome> 
 
 Conceitos: 
     Imagem -> É o projeto que será executavel pelo container, todas instruções estarão declaradas nela

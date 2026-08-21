@@ -104,10 +104,17 @@ Códigos:
         Criar nó: docker run -d --privileged --name node1 --hostname node1 docker:dind
         Iniciar no manager: docker exec -it node1 docker swarm init
         Juntar ao cluster: docker exec -it node2 docker swarm join --token <COLE_O_SEU_TOKEN_AQUI> <IP_DO_MANAGER>:2377
+        Criar serviço: docker service create --name <nome> <imagem>
         Listar serviços: docker service ls
+        Liberar porta: docker service update --publish-add 8080:80 <nome>
         Remover seviço: docker service rm <nome>
+        Replicar serviço: docker service create --name <nome> --replicas <numero> <imagem>
         Recuperar token: docker swarm join-token manager
-        
+        Rebaixar de poder: docker node demote <nome>
+        Ver informações: docker info
+        Deixar nos: docker swarm leave
+        Inscepcionando serviço: docker service inspect <id>
+        Inscepcionar serviço: docker service ps <id>
 
 Conceitos: 
     Imagem -> É o projeto que será executavel pelo container, todas instruções estarão declaradas nela

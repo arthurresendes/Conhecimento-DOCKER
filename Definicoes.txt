@@ -11,6 +11,10 @@ Códigos:
 
     Ajuda:
         docker run --help
+    
+    Hub:
+        docker login -> Logar antes
+        docker push nomeDoSeuUser/imagem -> Mandar para o docker hub
 
     Rodar:
         docker run ubuntu -> Baixando ubuntu
@@ -60,9 +64,10 @@ Códigos:
 
     Criar Imagem:
         FROM -> Imagem base
+        RUN -> Baixar libs/comandos necessarios
         WORKDIR -> Diretorio da aplicação
         EXPOSE -> Porta
-        COPY -> Quais arquivos serão copiados (requirements.txt, package.json)
+        COPY -> Quais arquivos serão copiados e para onde vai(requirements.txt, workdir)
         CMD ["linguagem/framework", "arq.x"]
         docker build . -> No terminal para rodar o Dockerfile (Caso faça alteração é necessario buildar novamente)
         docker build -t meu_node_builder . -> Colocar name no build
@@ -130,8 +135,7 @@ Códigos:
         minikube stop -> Parar minikube
         minikube dashboard -> Ver detalhes do projeto como: serviços, pods e etc
         minikube dashboard --url -> Obter apenas a url
-
-
+        docker push imagem -> Mandar 
 
 Conceitos: 
     Imagem -> É o projeto que será executavel pelo container, todas instruções estarão declaradas nela

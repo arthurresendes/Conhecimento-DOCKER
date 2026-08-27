@@ -125,6 +125,13 @@ Códigos:
     Kubernets:
         kubectl version -> Ver versão
         minikube version -> Ver versão
+        minikube start --driver=docker -> Startar o minikube (sempre que o computador for reiniciado, devemos iniciar o minikube)
+        minikube status -> Ver status
+        minikube stop -> Parar minikube
+        minikube dashboard -> Ver detalhes do projeto como: serviços, pods e etc
+        minikube dashboard --url -> Obter apenas a url
+
+
 
 Conceitos: 
     Imagem -> É o projeto que será executavel pelo container, todas instruções estarão declaradas nela

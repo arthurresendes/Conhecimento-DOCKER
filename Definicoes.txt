@@ -136,6 +136,24 @@ Códigos:
         minikube dashboard -> Ver detalhes do projeto como: serviços, pods e etc
         minikube dashboard --url -> Obter apenas a url
         docker push imagem -> Mandar 
+        kubectl create deployment <NOME> --image<IMAGEM> -> Criar deployment
+        kubectl get deployments -> Verificar deployment
+        kubectl describe deployments -> Mais detalhes do deployment
+        kubectl get pods -> Verificar os pods
+        kubectl describe pods -> Mais detalhes
+        kubectl config view -> Verificar como o kubernetes está configurado
+        kubectl expose deployment <NOME> --type=<TIPO> --port=<PORT> -> Criar serviço e expor nossos Pods, primeiro nome do deployment, tipo LoadBalancer é o mais comum
+        minikube service <NOME> -> Acessar serviço, ip aparece no terminal e uma aba é aberta
+        kubectl get services -> Ver serviços
+        kubectl describe services/<NOME> -> Ver serviço especifico
+        kubectl scale deployment/<NOME> --replicas=<NUMERO> -> Criar replica de pods
+        kubectl get rs -> Checar replicas
+        kubectl scale deployment/<NOME> --replicas=<NUMERO_MENOR> -> scale down, reduzindo o número de Pods
+        kubectl set image deployment/<NOME> <NOME_CONTAINER>=<NOME_IMAGEM> = Atualizar imagem
+        kubectl rollout status deployment/<NOME> -> Verificar uma alteração
+        kubectl rollout undo deployment/<NOME> -> Desfazer uma alteração
+        kubectl delete service <NOME> -> Deletar service
+        kubectl delete deployment <NOME> -> Deletar deployment
 
 Conceitos: 
     Imagem -> É o projeto que será executavel pelo container, todas instruções estarão declaradas nela
@@ -169,3 +187,9 @@ Conceitos:
         Pod: Um ou mais containers que estão em um Node
         Services: Serviços que expõe os Pods ao mundo externo
         kubectl: Cliente de linha de comando para o Kubernetes
+        Chaves mais utilizafas do modo declarativo:
+            apiVersion: versão utilizada da Ferramenta
+            kind: tipo do arquivo(Deployment, service)
+            metadata: descrever algum objeto
+            replicas: número de replicas de Nodes/Pods
+            containers: especificação de containers

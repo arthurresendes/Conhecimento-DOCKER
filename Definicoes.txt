@@ -154,6 +154,8 @@ Códigos:
         kubectl rollout undo deployment/<NOME> -> Desfazer uma alteração
         kubectl delete service <NOME> -> Deletar service
         kubectl delete deployment <NOME> -> Deletar deployment
+        kubectl apply -f <NOME_ARQ> - Rodar no modo declarativo o deployment ou o service
+        kubectl delete -f arquivo -> Parar o deployment ou service
 
 Conceitos: 
     Imagem -> É o projeto que será executavel pelo container, todas instruções estarão declaradas nela

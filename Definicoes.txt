@@ -136,7 +136,7 @@ Códigos:
         minikube dashboard -> Ver detalhes do projeto como: serviços, pods e etc
         minikube dashboard --url -> Obter apenas a url
         docker push imagem -> Mandar 
-        kubectl create deployment <NOME> --image<IMAGEM> -> Criar deployment
+        kubectl create deployment <NOME> --image=<IMAGEM> -> Criar deployment
         kubectl get deployments -> Verificar deployment
         kubectl describe deployments -> Mais detalhes do deployment
         kubectl get pods -> Verificar os pods

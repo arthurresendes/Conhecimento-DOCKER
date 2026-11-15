@@ -12,6 +12,7 @@
    - docker compose down --volumes
 
 ---
+---
 
 ## Comandos Docker essenciais (rápido)
 - Listar containers: docker ps
